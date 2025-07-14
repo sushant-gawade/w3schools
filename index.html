@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My W3Schools Certificate</title>
+    <style>
+      /* ===== Base Reset ===== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+          sans-serif;
+      }
+
+      body {
+        background: #f5f7fa;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      /* ===== Card ===== */
+      .card {
+        background: #ffffff;
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        max-width: 780px;
+        width: 100%;
+        animation: fadeIn 0.8s ease-out both;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          translate: 0 1rem;
+        }
+        to {
+          opacity: 1;
+          translate: 0 0;
+        }
+      }
+
+      /* ===== Image ===== */
+      .certificate {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        background: #e8ebf0;
+      }
+
+      /* ===== Content ===== */
+      .content {
+        padding: 1.5rem 2rem 2rem;
+      }
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        color: #1f2937;
+      }
+
+      .subtitle {
+        margin-top: 0.25rem;
+        font-size: 0.9375rem;
+        letter-spacing: 0.015rem;
+        text-align: center;
+        color: #4b5563;
+      }
+
+      /* ===== Button ===== */
+      .btn {
+        display: inline-block;
+        margin: 1.5rem auto 0;
+        padding: 0.75rem 1.75rem;
+        border: none;
+        border-radius: 9999px;
+        background: #3b82f6;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 150ms ease;
+      }
+
+      .btn:hover {
+        background: #2563eb;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 480px) {
+        .content {
+          padding: 1.25rem 1.25rem 1.75rem;
+        }
+        .title {
+          font-size: 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <!-- Replace the src below with the path to your certificate JPG -->
+      <img
+        src="certificate.jpg"
+        alt="W3Schools Certificate of Completion"
+        class="certificate"
+        id="certificate-img"
+      />
+
+      <div class="content">
+        <h1 class="title">Certificate of Completion</h1>
+        <p class="subtitle">Issued by W3Schools</p>
+        <button class="btn" id="download-btn">Download Certificate</button>
+      </div>
+    </div>
+
+    <script>
+      // Optional: allow users to download the certificate image directly
+      const downloadBtn = document.getElementById("download-btn");
+      const certImg = document.getElementById("certificate-img");
+
+      downloadBtn.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.href = certImg.src;
+        link.download = "w3schools_certificate.jpg";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      });
+    </script>
+  </body>
+</html>
