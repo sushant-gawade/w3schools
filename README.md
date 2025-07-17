@@ -6,7 +6,7 @@ A modern and responsive web page to **display and download your W3Schools Certif
 
 ## 🚀 Live Demo
 
-🔗 [View it on GitHub Pages](https://yourusername.github.io/your-repo-name/)  
+🔗 [View it on GitHub Pages](https://sushant-gawade.github.io/w3schools/)  
 *(Update the link after uploading your project and enabling GitHub Pages)*
 
 ---
